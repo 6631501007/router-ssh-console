@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Router SSH Console</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Router SSH Console</h1>
+
+        <p class="subtitle">
+            Execute Cisco Router commands through SSH
+        </p>
+
+
+        <div class="form-group">
+
+            <label>
+                Router IP Address
+            </label>
+
+            <input
+                id="routerIp"
+                type="text"
+                placeholder="192.168.68.131"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Router Command
+            </label>
+
+            <input
+                id="routerCommand"
+                type="text"
+                placeholder="show ip interface brief"
+            >
+
+        </div>
+
+
+        <button
+            id="executeButton"
+            onclick="executeCommand()">
+
+            Execute Command
+
+        </button>
+
+
+        <div class="status"
+             id="status">
+        </div>
+
+
+        <h2>Router Output</h2>
+
+        <pre id="output">Waiting for command...</pre>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
